@@ -1,5 +1,8 @@
 package com.spring.core.chap04;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class JannChef implements Chef {
 
     @Override

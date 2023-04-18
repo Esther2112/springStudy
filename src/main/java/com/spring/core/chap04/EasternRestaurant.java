@@ -1,6 +1,7 @@
 package com.spring.core.chap04;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +15,8 @@ public class EasternRestaurant implements Restaurant {
 
     @Autowired
     //생성자 주입
-    public EasternRestaurant(Chef chef, Course course) {
+    public EasternRestaurant(
+            @Qualifier("kc") Chef chef, Course course) {
         this.chef = chef;
         this.course = course;
     }

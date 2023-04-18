@@ -1,6 +1,7 @@
 package com.spring.core.chap04;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -19,7 +20,7 @@ public class Hotel {
     }
     @Autowired //컨테이너에 등록된 객체를 알아서 주입좀 해줘
     //생성자 주입
-    public Hotel(Restaurant restaurant, Chef headChef) {
+    public Hotel(Restaurant restaurant, @Qualifier("kc") Chef headChef) {
         this.restaurant = restaurant;
         this.headChef = headChef;
     }
