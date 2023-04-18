@@ -1,8 +1,6 @@
-package com.spring.core.chap01;
+package com.spring.core.chap02;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
 class HotelTest {
 
